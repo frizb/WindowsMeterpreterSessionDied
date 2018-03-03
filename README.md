@@ -1,6 +1,11 @@
 # WindowsMeterpreterSessionDied
-Some exploits are unstable in nature and only allow for a very short shell command window. These scripts can help extend your remote shell session by quickly spawning a new reverse shell. 
+Some exploits are unstable in nature and only allow for a very short shell command window. Often times the reason the shell dies after only 30 secs is because underlying Windows OS doesnt recieve the confirmation of the started service. 
+One way to get around this 30 second reverse shell limitation is to create a child process in the parent process. After the parent reverse shell process dies the child process will live on.
+These scripts can help extend your remote shell session by quickly spawning a new reverse shell in a child process or new thread.
+The txt files in this project with the word "Thread" in them spawn a new thread in a new CMD window.
 This solution can be leveraged on any reverse shell that dies prematurely (Metepreter, NC, NCat etc) as the commands can be easily copied and pasted in a single action. 
+
+NOTE:  Sometimes the reverse shell line will run before the NC.exe file has fully downloaded, just try running the nc.exe command again or waiting until running the final command until the nc.exe file has fully downloaded.
 
 Here is an example of a Metepreter Exploit with a short lived reverse shell:
 
