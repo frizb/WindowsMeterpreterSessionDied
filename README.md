@@ -1,4 +1,4 @@
-# WindowsMeterpreterSessionDied
+# Windows Meterpreter Session Died
 Some exploits are unstable in nature and only allow for a very short shell command window. Often times the reason the shell dies after only 30 secs is because underlying Windows OS doesnt recieve the confirmation of the started service. 
 One way to get around this 30 second reverse shell limitation is to create a child process in the parent process. After the parent reverse shell process dies the child process will live on.
 These scripts can help extend your remote shell session by quickly spawning a new reverse shell in a child process or new thread.
