@@ -6,3 +6,4 @@ echo bStrm.type = 1 >> dl.vbs
 echo bStrm.open >> dl.vbs
 echo bStrm.write xHttp.responseBody >> dl.vbs
 echo bStrm.savetofile WScript.Arguments(1), 2 >> dl.vbs
+echo done!
