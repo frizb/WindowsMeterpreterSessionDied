@@ -1,4 +1,4 @@
-echo dim xHttp: Set xHttp = createobject("MSXML2.ServerXMLHTTP.6.0")  > dl.vbs
+echo dim xHttp: Set xHttp = CreateObject("MSXML2.ServerXMLHTTP.6.0")  > dl.vbs
 echo dim bStrm: Set bStrm = createobject("Adodb.Stream")  >> dl.vbs
 echo xHttp.Open "GET", WScript.Arguments(0), False  >> dl.vbs
 echo xHttp.Send >> dl.vbs
